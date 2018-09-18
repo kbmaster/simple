@@ -1,6 +1,21 @@
 <php?
 
-//header("HTTP/1.1 200 OK");
-header("HTTP/1.1 440 Not Found");
+if (!function_exists('http_response_code'))
+{
+    function http_response_code($newcode = NULL)
+    {
+        static $code = 200;
+        if($newcode !== NULL)
+        {
+            header('X-PHP-Response-Code: '.$newcode, true, $newcode);
+            if(!headers_sent())
+                $code = $newcode;
+        }       
+        return $code;
+    }
+}
+
+
+http_response_code(440);
 
 ?>
