@@ -1,6 +1,6 @@
 <php?
 
-http_response_code(440);
-//http_response_code(200);
+//header("HTTP/1.1 200 OK");
+header("HTTP/1.1 440 Not Found");
 
 ?>
