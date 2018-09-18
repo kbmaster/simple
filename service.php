@@ -16,6 +16,6 @@ if (!function_exists('http_response_code'))
 }
 
 
-http_response_code(440);
+http_response_code(200);
 
 ?>
