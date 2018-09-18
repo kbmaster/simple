@@ -6,7 +6,7 @@ status=$(curl -w "%{http_code}\\n" -H "Accept:application/json" -H "Content-Type
 
 echo "Status $status"
 
-if [ "$status" == "200" ]; then 
+if [ "$status" != "200" ]; then 
 echo "El servicio no responde"
 exit 1;
 fi
