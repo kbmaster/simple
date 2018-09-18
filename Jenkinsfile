@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing master..'
+		sh './test.sh'
             }
         }
         stage('Deploy') {
