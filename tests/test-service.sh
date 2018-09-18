@@ -3,7 +3,7 @@ status=$(curl -w "%{http_code}\\n" -H "Accept:application/json" -H "Content-Type
 
 if [$status -neq 200]; then 
 echo "El servicio no responde\n"
-exit(1);
+exit 1;
 fi
 
-exit(0);
+exit 0;
